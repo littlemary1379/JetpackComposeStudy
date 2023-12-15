@@ -25,6 +25,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
+import com.example.jetpackstudy.theme.JetPackStudyTheme
 
 
 class MainActivity : ComponentActivity() {
@@ -34,7 +35,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             //Test()
-            MaterialTheme {
+            JetPackStudyTheme {
                 Surface(modifier = Modifier.fillMaxSize()) {
                     MessageCard(msg = Message(author = "real author", content = "real content"))
                 }
@@ -58,7 +59,7 @@ class MainActivity : ComponentActivity() {
         uiMode = Configuration.UI_MODE_NIGHT_YES
     )
     fun PreviewMessage() {
-        MaterialTheme {
+        JetPackStudyTheme {
             Surface {
                 MessageCard(msg = Message(author = "test author", content = "test content"))
             }
