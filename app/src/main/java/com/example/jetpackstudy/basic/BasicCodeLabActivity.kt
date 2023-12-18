@@ -1,4 +1,4 @@
-package com.example.jetpackstudy
+package com.example.jetpackstudy.basic
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import android.os.Bundle
@@ -32,7 +32,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.jetpackstudy.theme.JetPackStudyTheme
 
-class CodeLabActivity : ComponentActivity() {
+class BasicCodeLabActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

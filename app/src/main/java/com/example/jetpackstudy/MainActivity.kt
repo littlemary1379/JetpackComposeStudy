@@ -37,6 +37,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
+import com.example.jetpackstudy.basic.BasicCodeLabActivity
 import com.example.jetpackstudy.theme.JetPackStudyTheme
 
 
@@ -63,7 +64,7 @@ class MainActivity : ComponentActivity() {
         Text(
             modifier = Modifier
                 .clickable {
-                    val intent = Intent(this, CodeLabActivity::class.java)
+                    val intent = Intent(this, BasicCodeLabActivity::class.java)
                     startActivity(intent)
                 }
                 .padding(Dp(10f))
@@ -72,7 +73,7 @@ class MainActivity : ComponentActivity() {
                 .padding(Dp(10f))
                 .fillMaxWidth(),
             textAlign = TextAlign.Center,
-            text = "codelab study"
+            text = "codelab basic study"
         )
     }
 
