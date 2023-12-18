@@ -1,5 +1,6 @@
 package com.example.jetpackstudy
 
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -26,6 +27,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.jetpackstudy.theme.JetPackStudyTheme
@@ -36,7 +38,7 @@ class CodeLabActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            JetPackStudyTheme {
+            JetPackStudyTheme(dynamicColor = false) {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
@@ -123,7 +125,7 @@ class CodeLabActivity : ComponentActivity() {
         }
     }
 
-    @Preview(showBackground = true, widthDp = 320)
+    @Preview(showBackground = true, widthDp = 320, uiMode = UI_MODE_NIGHT_YES)
     @Composable
     private fun GreetingsPreview() {
         JetPackStudyTheme {
@@ -173,7 +175,9 @@ class CodeLabActivity : ComponentActivity() {
                     .padding(bottom = extraPadding.coerceAtLeast(0.dp))
                 ) {
                     Text(text = "Hello, ")
-                    Text(text = name)
+                    Text(text = name, style = MaterialTheme.typography.headlineMedium.copy(
+                        fontWeight = FontWeight.ExtraBold
+                    ))
                 }
 
                 ElevatedButton(onClick = {
