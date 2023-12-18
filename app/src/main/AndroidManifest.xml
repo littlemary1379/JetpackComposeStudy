@@ -23,7 +23,7 @@
         </activity>
 
         <activity
-            android:name=".CodeLabActivity"
+            android:name=".basic.BasicCodeLabActivity"
             android:exported="true"/>
 
     </application>
